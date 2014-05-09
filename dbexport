@@ -1,0 +1,5 @@
+#!/bin/bash
+_now=$(date +"%m%d%Y_%s")
+_file="sql/microneeds_db_$_now.sql"
+echo "Starting backup to $_file..."
+mysqldump -u root  -p'M!croneed5' microneeds > "$_file"
